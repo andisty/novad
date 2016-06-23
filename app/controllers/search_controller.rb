@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
   def index
-    @novels = Novel.joins(:topics).
-      search(search_param)
+    @novels = Novel.includes(:genres, :author).search(search_param)
 
     respond_to do |format|
       format.html
@@ -12,6 +11,6 @@ class SearchController < ApplicationController
   private
 
   def search_param
-    params.require(:search)
+    params.require(:query)
   end
 end
