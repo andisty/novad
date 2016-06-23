@@ -1,0 +1,17 @@
+<h1>
+  <%= @novel.title %>
+</h1>
+
+
+<h3><%= link_to @novel.author.name, @novel.author %> </h3>
+
+<p><%= @novel.year %></p>
+<p><%= @novel.plot %></p>
+
+<p>
+   <% @novel.genres.each do |genre| %>
+       <%= link_to "#{genre.name}", genre, class: "btn btn-primary btn-xs" %>
+   <% end %>
+</p>
+
+<img class = "cover" src = "<%= @novel.cover %>" />
