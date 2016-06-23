@@ -37,3 +37,23 @@ div#main {
 .btn {
    margin: 4px;
 }
+
+
+
+.navbar-form {
+  @media (min-width: 768px) {
+    width: auto;
+    border: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+  }
+}
+
+.navbar-left {
+  @media (min-width: 768px){
+    float: left !important;
+  }
+}
