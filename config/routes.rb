@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
-  get 'genres/index'
+  get "/search(.:format)" => "search#index", as: :search
 
-  get 'genres/show'
+  # get 'genres/index'
+  #
+  # get 'genres/show'
 
   resources :novels
 
-  get 'novels/index'
-
-  get 'novels/show'
+  # get 'novels/index'
+  #
+  # get 'novels/show'
 
   resources :authors
 
